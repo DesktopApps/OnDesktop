@@ -4,7 +4,7 @@
   "description": "Web apps, on your desktop.",
   "main": "dist/main.js",
   "scripts": {
-    "prestart": "npx tsc && cp ./src/index.html ./dist/index.html && cp ./src/icon.png ./dist/icon.png",
+    "prestart": "npx tsc && cp -r ./src/ ./dist/assets/",
     "start": "npx nativefier --name \"OnDesktop\" \"https://ondesktop.cyou\"",
     "poststart": "rm -rf dist",
 

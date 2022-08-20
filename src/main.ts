@@ -1,7 +1,9 @@
 import {app, BrowserWindow, BrowserWindowConstructorOptions, nativeImage} from "electron";
+import { w } from "./util";
 import path from "path";
-import url from "url";
 
+
+/** Browser options */
 const options : BrowserWindowConstructorOptions = {
   title: "OnDesktop",
   icon: nativeImage.createFromPath(path.join(__dirname, 'icon.png')),
@@ -20,21 +22,15 @@ const options : BrowserWindowConstructorOptions = {
   },
 }
 
-const window : BrowserWindow = new BrowserWindow(options);
+/** The Electron Window */
+export let window : BrowserWindow;
 
 
 function createWindow () {
 
-  
+  window = new BrowserWindow(options);;
 
-
-
-  // Load the index.html of the app.
-  window.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
-    slashes: true
-  }));
+  w.loadFile("index.html");
 
 
   window.show();
