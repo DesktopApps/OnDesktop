@@ -1,0 +1,30 @@
+{
+  "name": "ondesktop",
+  "version": "0.0.1",
+  "description": "Web apps, on your desktop.",
+  "main": "dist/main.js",
+  "scripts": {
+    "prestart": "npx tsc && cp ./src/index.html ./dist/index.html",
+    "start": "npx nativefier --name \"OnDesktop\" \"https://ondesktop.cyou\"",
+    "poststart": "rm -rf dist",
+
+    "cleanup": "rm -rf ./dist/ && rm -rf ./xMeerkat-darwin-arm64/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DesktopApps/OnDesktop"
+  },
+  "author": "xMeerkat",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/DesktopApps/OnDesktop/issues"
+  },
+  "homepage": "https://github.com/DesktopApps/OnDesktop#readme",
+  "dependencies": {
+    "electron": "^20.0.3",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "nativefier": "^49.0.0"
+  }
+}
