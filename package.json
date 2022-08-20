@@ -7,7 +7,6 @@
     "prestart": "npx tsc && cp -r ./assets/ ./dist/assets/",
     "start": "npx nativefier --name \"OnDesktop\" \"https://ondesktop.cyou\"",
     "poststart": "rm -rf dist",
-
     "cleanup": "rm -rf ./dist/ && rm -rf ./xMeerkat-darwin-arm64/"
   },
   "repository": {
@@ -22,6 +21,7 @@
   "homepage": "https://github.com/DesktopApps/OnDesktop#readme",
   "dependencies": {
     "electron": "^20.0.3",
+    "make-random": "^3.0.2",
     "typescript": "^4.7.4"
   },
   "devDependencies": {

