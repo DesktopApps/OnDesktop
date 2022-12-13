@@ -1,0 +1,58 @@
+# Packager files
+package-lock.json
+pnpm-lock.yaml
+
+# Generated Config files
+config.json
+
+# Generated Log files
+*.log
+
+# NodeJS/npm modules
+node_modules/
+
+# Extension Private Key files
+*.pem
+
+# MacOS
+**/.DS_Store
+
+# IntelliJ IDEA
+/.idea/
+*.iml
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Various caches
+.npm
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
